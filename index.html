@@ -280,7 +280,7 @@ input::placeholder{color:var(--ink3);opacity:.8}
 <body>
 
 <!-- ═══ LOGIN ═══ -->
-<div id="login-screen">
+<div id="login-screen" style="display:none">
   <div class="lcard">
     <div class="llogo">
       <svg width="42" height="42" viewBox="0 0 42 42"><rect width="42" height="42" rx="10" fill="#1a1814"/><polygon points="21,4 4,16 4,38 38,38 38,16" fill="none" stroke="#b8893a" stroke-width="2" stroke-linejoin="round"/><rect x="14" y="24" width="14" height="14" rx="2" fill="#b8893a"/><circle cx="31" cy="11" r="3" fill="#b8893a"/></svg>
@@ -349,7 +349,7 @@ input::placeholder{color:var(--ink3);opacity:.8}
 </div>
 
 <!-- ═══ UYGULAMA ═══ -->
-<div id="app-screen">
+<div id="app-screen" style="display:none">
 <aside class="sidebar" id="sidebar">
   <div class="slogo">
     <svg width="30" height="30" viewBox="0 0 30 30"><rect width="30" height="30" rx="7" fill="#1a1814"/><polygon points="15,3 3,11 3,27 27,27 27,11" fill="none" stroke="#b8893a" stroke-width="1.8" stroke-linejoin="round"/><rect x="10" y="17" width="10" height="10" rx="1.5" fill="#b8893a"/></svg>
@@ -1415,6 +1415,13 @@ input::placeholder{color:var(--ink3);opacity:.8}
 
 
 
+<script>
+/* ── Başlangıç: Login göster, App gizle ── */
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('app-screen').style.display   = 'none';
+});
+</script>
 <script>
 /* EP15 MODULES - AUTH / LOG / VERSION / ANNOUNCE */
 
