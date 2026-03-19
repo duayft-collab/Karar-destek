@@ -1,0 +1,33 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/activity.html — Aktivite / Activity Log
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('activity') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-activity"
+  class="page"
+  data-page="activity"
+  data-title-tr="Aktivite"
+  data-title-en="Activity Log"
+  data-fn="aktiviteGoster"
+>
+<div id="page-activity" class="page">
+    <div class="ph"><div class="pgtitle">Aktivite Kaydı</div><div class="pgsub">Tüm işlemlerinizin zaman damgalı kaydı</div></div>
+    <div class="card">
+      <div class="tbar mb12">
+        <div class="srch"><input type="text" id="aktiv-ara" placeholder="İşlem ara..." oninput="aktiviteGoster()"></div>
+        <select class="fsel" id="aktiv-tip" onchange="aktiviteGoster()">
+          <option value="">Tüm İşlemler</option>
+          <option value="login">🔑 Giriş/Çıkış</option>
+          <option value="prop">🏠 Mülk</option>
+          <option value="pay">💰 Ödeme</option>
+          <option value="ai">🤖 AI</option>
+        </select>
+      </div>
+      <div id="aktiv-listesi"></div>
+    </div>
+  </div>
+</section>

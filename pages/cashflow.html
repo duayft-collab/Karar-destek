@@ -1,0 +1,40 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/cashflow.html — Nakit Akışı / Cash Flow
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('cashflow') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-cashflow"
+  class="page"
+  data-page="cashflow"
+  data-title-tr="Nakit Akışı"
+  data-title-en="Cash Flow"
+  data-fn="nakitAkisiGoster"
+>
+<div id="page-cashflow" class="page">
+    <div class="ph"><div class="pgtitle">Nakit Akışı Analizi</div></div>
+    <div class="g5 mb16" id="cf-stats"></div>
+    <div class="g2 mb16">
+      <div class="card"><div class="stitle">Gelir vs Gider</div><div style="height:200px"><canvas id="ch-ge"></canvas></div></div>
+      <div class="card"><div class="stitle">Cap Rate / ROE</div><div style="height:200px"><canvas id="ch-cr"></canvas></div></div>
+    </div>
+    <div class="card mb16">
+      <div class="stitle">Mülk Bazlı Analiz</div>
+      <div class="tw"><table><thead><tr><th>Durum</th><th>Mülk</th><th>Kira/ay</th><th>Gider/ay</th><th>Net CF/ay</th><th>Cap Rate</th><th>ROE%</th><th>LTV%</th><th>GRM</th><th>Geri Dönüş</th><th>DSCR</th></tr></thead><tbody id="cf-tbody"></tbody></table></div>
+    </div>
+    <div class="g2 mb16">
+      <div class="card"><div class="stitle">Sermaye Analizi (ROE)</div><div id="roe-panel"></div></div>
+      <div class="card"><div class="stitle">Vergi Kalkanı</div><div id="tax-panel"></div></div>
+    </div>
+    <div class="card mb16">
+      <div class="stitle">Exit Stratejisi</div>
+      <div class="fr f3"><div><label>Mülk</label><select id="exit-mulk"></select></div><div><label>Hedef m² Fiyatı (₺)</label><input type="number" id="exit-sqm" placeholder="45.000"></div><div><label>Büyüklük (m²)</label><input type="number" id="exit-alan" placeholder="120"></div></div>
+      <button class="btn btn-pri" onclick="exitHesapla()">Hesapla →</button>
+      <div id="exit-sonuc" class="mt12"></div>
+    </div>
+    <div class="card"><div class="stitle">Kaldıraç Analizi</div><div id="kaldıraç-panel"></div></div>
+  </div>
+</section>

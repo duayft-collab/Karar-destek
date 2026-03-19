@@ -1,0 +1,32 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/calendar.html — Takvim / Calendar
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('calendar') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-calendar"
+  class="page"
+  data-page="calendar"
+  data-title-tr="Takvim"
+  data-title-en="Calendar"
+  data-fn="takvimGoster"
+>
+<div id="page-calendar" class="page">
+    <div class="ph"><div class="phr"><div><div class="pgtitle">Takvim & Ödemeler</div></div><button class="btn btn-gold" onclick="odemeModalAc()">+ Ödeme</button></div></div>
+    <div class="g2">
+      <div class="card">
+        <div class="cal-nav"><button class="cal-nb" onclick="ayDegistir(-1)">‹</button><div class="cal-mlbl" id="cal-baslik"></div><button class="cal-nb" onclick="ayDegistir(1)">›</button></div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div class="mt12"><div class="stitle">Bu Ayın Ödemeleri</div><div id="cal-etkinlikler"></div></div>
+      </div>
+      <div>
+        <div class="card mb12"><div class="stitle">Yaklaşan (30 Gün)</div><div id="yaklasan-odemeler"></div></div>
+        <div class="card mb12"><div class="stitle">Gecikmiş Ödemeler</div><div id="geciken-odemeler"></div></div>
+        <div class="card"><div class="stitle">Aylık Özet</div><div id="cal-ozet"></div></div>
+      </div>
+    </div>
+  </div>
+</section>

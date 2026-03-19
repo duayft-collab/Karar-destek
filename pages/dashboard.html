@@ -1,0 +1,42 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/dashboard.html — Dashboard / Dashboard
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('dashboard') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-dashboard"
+  class="page"
+  data-page="dashboard"
+  data-title-tr="Dashboard"
+  data-title-en="Dashboard"
+  data-fn="dashboardGoster"
+>
+<div id="page-dashboard" class="page active">
+    <div class="ph"><div class="phr"><div><div class="pgtitle">Dashboard</div><div class="pgsub" id="dash-tarih"></div></div><button class="btn btn-gold" onclick="mulkModalAc()">+ Mülk Ekle</button></div></div>
+    <div class="g5 mb16" id="dash-stats"></div>
+    <div class="g2 mb16">
+      <div class="card"><div class="stitle">Finansal Özgürlük</div>
+        <div class="flex gap12" style="align-items:center">
+          <div class="fring"><svg width="106" height="106"><circle cx="53" cy="53" r="43" fill="none" stroke="var(--bdr)" stroke-width="9"/><circle id="ozgurluk-arc" cx="53" cy="53" r="43" fill="none" stroke="var(--gold)" stroke-width="9" stroke-linecap="round" stroke-dasharray="270" stroke-dashoffset="270" style="transition:stroke-dashoffset 1s ease"/></svg><div class="frc"><div class="frc-pct" id="ozgurluk-pct">0%</div><div class="frc-lbl">Özgürlük</div></div></div>
+          <div style="flex:1"><label>Aylık Gider (₺)</label><input type="number" id="yasam-gider" placeholder="50.000" oninput="ozgurlukHesapla()"><div id="ozgurluk-txt" class="txt-sm neu mt8"></div></div>
+        </div>
+      </div>
+      <div class="card"><div class="stitle">Aktif / Pasif Varlıklar</div><div id="ap-list"></div></div>
+    </div>
+    <div class="g2 mb16">
+      <div class="card"><div class="stitle">Portföy Dağılımı</div><div style="height:180px"><canvas id="ch-dagilim"></canvas></div></div>
+      <div class="card"><div class="stitle">Net Nakit Akışı</div><div style="height:180px"><canvas id="ch-nakitakis"></canvas></div></div>
+    </div>
+    <div class="card">
+      <div class="stitle">Mülklerim</div>
+      <div class="tbar">
+        <div class="srch"><input type="text" id="dash-ara" placeholder="Mülk ara..." oninput="dashTablo()"></div>
+        <select class="fsel" id="dash-tur" onchange="dashTablo()"><option value="">Tüm Türler</option><option>Daire</option><option>Villa</option><option>Arsa</option><option>Tarla</option><option>İşyeri</option><option>Dükkan</option></select>
+      </div>
+      <div class="tw"><table><thead><tr><th>Durum</th><th>Mülk</th><th>Tür</th><th>Alış (₺)</th><th>Güncel (₺)</th><th>Kira/ay</th><th>Net CF/ay</th><th>Cap Rate</th><th>GRM</th><th>İşlem</th></tr></thead><tbody id="dash-tbody"></tbody></table></div>
+    </div>
+  </div>
+</section>

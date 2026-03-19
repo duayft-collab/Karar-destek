@@ -1,0 +1,91 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/piyasa.html — Piyasa İstihbaratı / Market Intel
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('piyasa') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-piyasa"
+  class="page"
+  data-page="piyasa"
+  data-title-tr="Piyasa İstihbaratı"
+  data-title-en="Market Intel"
+  data-fn="piyasaGoster"
+>
+<div id="page-piyasa" class="page">
+    <div class="ph">
+      <div class="phr">
+        <div>
+          <div class="pgtitle">🌍 Piyasa İstihbaratı</div>
+          <div class="pgsub">Gayrimenkulü etkileyen yerel ve global gelişmeler — Canlı analiz</div>
+        </div>
+        <button class="btn btn-pri btn-sm" onclick="piyasaYenile()">⟳ Güncelle</button>
+      </div>
+    </div>
+
+    <!-- KPI'lar -->
+    <div class="g4 mb16" id="piyasa-kpi"></div>
+
+    <!-- Ana içerik -->
+    <div class="g2 mb16">
+      <!-- Sol: Haber & Analiz -->
+      <div>
+        <div class="card mb12">
+          <div class="stitle">🔴 Canlı Analiz</div>
+          <div id="piyasa-analiz-yukleniyor" style="text-align:center;padding:24px;color:var(--ink3)">
+            <div style="font-size:24px;margin-bottom:8px">🤖</div>
+            <div class="txt-sm">Güncelle butonuna basın — AI piyasa analizi yapacak</div>
+          </div>
+          <div id="piyasa-analiz-sonuc" style="display:none"></div>
+        </div>
+        <div class="card">
+          <div class="stitle">📰 Başlıklar</div>
+          <div id="piyasa-haberler">
+            <div class="txt-sm neu" style="padding:12px">Güncelle butonuna basın.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sağ: Göstergeler -->
+      <div>
+        <div class="card mb12">
+          <div class="stitle">📊 Temel Göstergeler</div>
+          <div id="piyasa-gostergeler">
+            <div class="fr f1 mb8"><label>Referans Şehir / Bölge</label><input id="piyasa-sehir" placeholder="İstanbul, Kadıköy" value="İstanbul"></div>
+            <div class="fr f1 mb8"><label>Portföy Odak</label><select id="piyasa-odak"><option>Konut</option><option>Ticari</option><option>Arsa</option><option>Karma</option></select></div>
+            <div id="gostergeler-list"></div>
+          </div>
+        </div>
+
+        <div class="card mb12">
+          <div class="stitle">🌐 Takip Listesi</div>
+          <div style="display:flex;flex-direction:column;gap:6px" id="takip-listesi">
+            <div class="badge bg-blu" style="padding:5px 10px">📈 TCMB Faiz Kararları</div>
+            <div class="badge bg-gold" style="padding:5px 10px">🏠 TÜİK Konut Fiyat Endeksi</div>
+            <div class="badge bg-grn" style="padding:5px 10px">💵 USD/TRY Kuru</div>
+            <div class="badge bg-pur" style="padding:5px 10px">🏗 İnşaat Maliyet Endeksi</div>
+            <div class="badge bg-red" style="padding:5px 10px">📊 Enflasyon (TÜFE)</div>
+            <div class="badge bg-ink" style="padding:5px 10px">🌍 Fed Faiz Kararları</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="stitle">💡 Portföy Etkisi</div>
+          <div id="piyasa-portfolyo-etki" class="txt-sm neu">
+            Analiz tamamlandıktan sonra portföyünüze özel etki değerlendirmesi burada görünür.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Geçmiş Analizler -->
+    <div class="card">
+      <div class="stitle">🗂 Kayıtlı Analizler</div>
+      <div id="piyasa-gecmis"></div>
+    </div>
+  </div>
+
+  <!-- BİLGİ BANKASI -->
+</section>

@@ -1,0 +1,87 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/admin.html — Admin Panel / Admin Panel
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('admin') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-admin"
+  class="page"
+  data-page="admin"
+  data-title-tr="Admin Panel"
+  data-title-en="Admin Panel"
+  data-fn="adminGoster"
+>
+<div id="page-admin" class="page">
+    <div class="ph"><div class="pgtitle">Admin Panel</div><div class="pgsub">Kullanıcı yönetimi · Log sistemi · Duyurular · Öneriler</div></div>
+    <div class="tabs mb16">
+      <div class="tab active" onclick="adminTab('kullanici',this)">👥 Kullanıcılar</div>
+      <div class="tab" onclick="adminTab('duyuru',this)">📢 Duyuru</div>
+      <div class="tab" onclick="adminTab('aktivite',this)">📋 Aktivite Logları</div>
+      <div class="tab" onclick="adminTab('oneriler-adm',this)">💡 Öneriler</div>
+    </div>
+
+    <!-- KULLANICILAR -->
+    <div id="adm-kullanici">
+      <div class="fb mb12">
+        <div class="stitle" style="margin:0">Kullanıcı Listesi</div>
+        <button class="btn btn-pri btn-sm" onclick="kullaniciModalAc()">+ Kullanıcı Ekle</button>
+      </div>
+      <div class="tw"><table><thead><tr>
+        <th>Kullanıcı</th><th>Ad Soyad</th><th>Rol</th><th>İzinler</th><th>Durum</th><th>Son Giriş</th><th>Kayıt</th><th>İşlemler</th>
+      </tr></thead><tbody id="kullanici-tbody"></tbody></table></div>
+    </div>
+
+    <!-- DUYURU -->
+    <div id="adm-duyuru" style="display:none">
+      <div class="card">
+        <div class="stitle">Yeni Duyuru Yayınla</div>
+        <div class="fr mb12">
+          <div><label>Başlık (TR)</label><input type="text" id="duyuru-baslik" placeholder="Türkçe başlık..."></div>
+          <div><label>Başlık (EN)</label><input type="text" id="duyuru-baslik-en" placeholder="English title..."></div>
+        </div>
+        <div class="fr mb12">
+          <div><label>İçerik (TR)</label><textarea id="duyuru-icerik" placeholder="Türkçe içerik..."></textarea></div>
+          <div><label>İçerik (EN)</label><textarea id="duyuru-icerik-en" placeholder="English content..."></textarea></div>
+        </div>
+        <div class="fr f1 mb12">
+          <label>Hedef Rol</label>
+          <select id="duyuru-rol"><option value="all">Tüm Kullanıcılar</option><option value="admin">Sadece Admin</option><option value="user">Sadece User</option></select>
+        </div>
+        <button class="btn btn-gold" onclick="duyuruYayinla()">📢 Yayınla</button>
+        <div class="divider"></div>
+        <div class="stitle">Yayınlanan Duyurular</div>
+        <div id="adm-duyuru-listesi"></div>
+      </div>
+    </div>
+
+    <!-- AKTİVİTE LOGLARI -->
+    <div id="adm-aktivite" style="display:none">
+      <div class="card">
+        <div class="tbar mb12">
+          <div class="srch"><input type="text" id="adm-aktiv-ara" placeholder="Kullanıcı veya işlem ara..." oninput="adminAktiviteGoster()"></div>
+          <select class="fsel" id="adm-aktiv-tip" onchange="adminAktiviteGoster()">
+            <option value="">Tüm İşlemler</option>
+            <option value="login">🔑 Giriş</option>
+            <option value="logout">↩ Çıkış</option>
+            <option value="prop">🏠 Mülk</option>
+            <option value="pay">💰 Ödeme</option>
+            <option value="admin">⚙️ Admin</option>
+          </select>
+          <select class="fsel" id="adm-aktiv-user" onchange="adminAktiviteGoster()">
+            <option value="">Tüm Kullanıcılar</option>
+          </select>
+          <button class="btn btn-out btn-sm" onclick="EP15_LOG.exportCSV()">↓ CSV</button>
+        </div>
+        <div id="adm-aktiv-listesi"></div>
+      </div>
+    </div>
+
+    <!-- ÖNERİLER (ADMIN) -->
+    <div id="adm-oneriler-adm" style="display:none">
+      <div id="adm-oneri-listesi"></div>
+    </div>
+  </div>
+</section>

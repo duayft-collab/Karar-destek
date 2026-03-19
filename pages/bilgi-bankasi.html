@@ -1,0 +1,52 @@
+<!--
+  Duay Global Trade Company — info@duaycor.com
+  pages/bilgi-bankasi.html — Bilgi Bankası / Knowledge Bank
+  v15.3.0 / 2025-03-20 09:00
+  Anayasa 01: Modüler sayfa şablonu
+  Bu dosya Router.load('bilgi-bankasi') ile dinamik olarak yüklenir.
+  Direkt açılması için parent: index.html
+-->
+<section
+  id="page-bilgi-bankasi"
+  class="page"
+  data-page="bilgi-bankasi"
+  data-title-tr="Bilgi Bankası"
+  data-title-en="Knowledge Bank"
+  data-fn="bilgiBankasiGoster"
+>
+<div id="page-bilgi-bankasi" class="page">
+    <div class="ph">
+      <div class="phr">
+        <div>
+          <div class="pgtitle">📚 Bilgi Bankası</div>
+          <div class="pgsub">Kitaplar · Yazarlar · Özlü Sözler · Yatırım İlkeleri</div>
+        </div>
+        <button class="btn btn-gold btn-sm" onclick="bilgiEkleModal()">+ Ekle</button>
+      </div>
+    </div>
+
+    <!-- Filtreleme -->
+    <div class="tabs mb16" id="bilgi-tabs">
+      <div class="tab active" onclick="bilgiFiltre('hepsi',this)">Tümü</div>
+      <div class="tab" onclick="bilgiFiltre('sozler',this)">💬 Özlü Sözler</div>
+      <div class="tab" onclick="bilgiFiltre('kitaplar',this)">📖 Kitaplar</div>
+      <div class="tab" onclick="bilgiFiltre('ilkeler',this)">🎯 Yatırım İlkeleri</div>
+      <div class="tab" onclick="bilgiFiltre('ipuclari',this)">💡 İpuçları</div>
+    </div>
+
+    <!-- Günün Sözü -->
+    <div class="card mb16" id="gunun-sozu-kart" style="background:linear-gradient(135deg,var(--goldbg),var(--surf));border:1px solid rgba(184,137,58,.25)">
+      <div class="stitle" style="color:var(--gold)">✨ Günün Sözü</div>
+      <div id="gunun-sozu" style="font-family:'Instrument Serif',serif;font-size:18px;color:var(--ink);line-height:1.6;margin-bottom:8px;font-style:italic"></div>
+      <div id="gunun-sozu-yazar" style="font-size:12px;color:var(--gold);font-weight:700"></div>
+    </div>
+
+    <!-- Arama -->
+    <div class="tbar mb16">
+      <div class="srch" style="flex:1"><input type="text" id="bilgi-ara" placeholder="Kitap, yazar, anahtar kelime ara..." oninput="bilgiBankasiGoster()"></div>
+    </div>
+
+    <!-- Liste -->
+    <div id="bilgi-listesi" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px"></div>
+  </div>
+</section>

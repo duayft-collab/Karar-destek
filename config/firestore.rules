@@ -1,0 +1,129 @@
+// ═══════════════════════════════════════════════════════════════
+// Duay Global Trade Company — info@duaycor.com
+// firestore.rules — Multi-Tenant Güvenlik Kuralları
+//
+// Anayasa Kural 02 (Kritik): Hiçbir kullanıcı başka
+// kullanıcının verisine erişemez. Admin hariç.
+// ═══════════════════════════════════════════════════════════════
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Yardımcı Fonksiyonlar ─────────────────────────────────
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isAuth() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isAuth() &&
+        exists(/databases/$(database)/documents/admin_users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admin_users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isSuperAdmin() {
+      return isAuth() &&
+        exists(/databases/$(database)/documents/admin_users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admin_users/$(request.auth.uid)).data.role == 'super_admin';
+    }
+
+    function isAdminOrSuper() {
+      return isAdmin() || isSuperAdmin();
+    }
+
+    // Veri boyutu sınırı — Anayasa 03 (güvenlik)
+    function isValidSize() {
+      return request.resource.data.size() < 100;
+    }
+
+    // ── Kullanıcı Profilleri ──────────────────────────────────
+    // /users/{uid} → sadece kendi profiline erişir
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+      allow read: if isAdminOrSuper();
+      allow write: if isSuperAdmin();  // Admin profil düzenleyebilir
+
+      // ── Mülkler (Multi-Tenant İzolasyon) ───────────────────
+      match /properties/{propertyId} {
+        allow read, write, delete: if isOwner(uid);
+        allow read: if isAdminOrSuper();
+        allow delete: if isAdminOrSuper();
+      }
+
+      // ── Kira Kayıtları ──────────────────────────────────────
+      match /rentals/{rentalId} {
+        allow read, write, delete: if isOwner(uid);
+        allow read: if isAdminOrSuper();
+      }
+
+      // ── Ödemeler ───────────────────────────────────────────
+      match /payments/{paymentId} {
+        allow read, write, delete: if isOwner(uid);
+        allow read: if isAdminOrSuper();
+      }
+
+      // ── Aktivite Logları ────────────────────────────────────
+      // Write: sadece sunucu (Cloud Functions) veya kendi kullanıcı
+      // Read: kendi + admin
+      match /activity/{logId} {
+        allow read: if isOwner(uid) || isAdminOrSuper();
+        allow create: if isOwner(uid);
+        allow update, delete: if isSuperAdmin();  // Log değiştirilemez
+      }
+
+      // ── Kullanıcı Ayarları ──────────────────────────────────
+      match /settings/{settingId} {
+        allow read, write: if isOwner(uid);
+        allow read: if isAdminOrSuper();
+      }
+    }
+
+    // ── Duyurular (Tüm Auth Kullanıcılar Okur) ───────────────
+    match /announcements/{announcementId} {
+      allow read: if isAuth();
+      allow create, update, delete: if isAdminOrSuper();
+    }
+
+    // ── Öneri & Geri Bildirim ─────────────────────────────────
+    match /suggestions/{suggestionId} {
+      allow read: if isAuth() &&
+        (resource.data.userId == request.auth.uid || isAdminOrSuper());
+      allow create: if isAuth() &&
+        request.resource.data.userId == request.auth.uid;
+      allow update: if isAdminOrSuper();  // Sadece admin durum güncelleyebilir
+      allow delete: if isSuperAdmin();
+    }
+
+    // ── Admin Kullanıcı Yönetimi ──────────────────────────────
+    match /admin_users/{uid} {
+      allow read: if isAdminOrSuper() || isOwner(uid);
+      allow write: if isSuperAdmin();
+    }
+
+    // ── Bilgi Bankası ─────────────────────────────────────────
+    match /knowledge_bank/{entryId} {
+      allow read: if isAuth();
+      allow write, delete: if isAdminOrSuper();
+    }
+
+    // ── Piyasa Analizleri ─────────────────────────────────────
+    match /market_analyses/{analysisId} {
+      allow read: if isAuth() &&
+        (resource.data.userId == request.auth.uid || isAdminOrSuper());
+      allow create: if isAuth() &&
+        request.resource.data.userId == request.auth.uid;
+      allow delete: if isAuth() &&
+        resource.data.userId == request.auth.uid;
+    }
+
+    // ── Tüm Diğer Belgeler: Erişim Yasak ─────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
