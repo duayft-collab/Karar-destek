@@ -12,7 +12,7 @@ import { Logger } from '../core/logger.js';
 // ── BURAYA KENDİ TRACKER REPO URL'İNİ YAZ ──────────────────────────
 // Örnek: https://raw.githubusercontent.com/KULLANICI/youtube-tracker/main/data/summaries.json
 const SUMMARIES_URL = Store.get('yt_summaries_url')
-  || 'https://raw.githubusercontent.com/KULLANICI_ADI/REPO_ADI/main/data/summaries.json';
+  || 'https://raw.githubusercontent.com/duayft-collab/youtube-tracker/main/data/summaries.json';
 
 const CACHE_KEY = 'yt_summaries';
 const CACHE_TTL = 30 * 60 * 1000; // 30 dakika
