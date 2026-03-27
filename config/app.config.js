@@ -26,6 +26,7 @@ const APP_CONFIG = Object.freeze({
   LOG_RETENTION_DAYS:          90,
 
   TABS: Object.freeze([
+    { id: 'signals',    label: 'Strateji Merkezi',  icon: 'signal',    page: 'pages/signals.html'    },
     { id: 'dashboard',  label: 'Genel Bakış',       icon: 'grid',      page: 'pages/dashboard.html'  },
     { id: 'world',      label: 'Dünya Ekonomisi',    icon: 'globe',     page: 'pages/world.html'      },
     { id: 'logistics',  label: 'Navlun & Lojistik',  icon: 'truck',     page: 'pages/logistics.html'  },
