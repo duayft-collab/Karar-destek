@@ -36,6 +36,7 @@ const APP_CONFIG = Object.freeze({
     { id: 'export',     label: 'İhracat & Ticaret',  icon: 'cart',      page: 'pages/export.html'     },
     { id: 'bizdev',     label: 'İş Geliştirme',      icon: 'briefcase', page: 'pages/bizdev.html'     },
     { id: 'growth',     label: 'Kişisel Gelişim',    icon: 'academic',  page: 'pages/growth.html'     },
+    { id: 'youtube',    label: 'YouTube Özetleri',  icon: 'video',     page: 'pages/youtube.html'    },
     { id: 'kids',       label: 'Çocuk Gelişimi',     icon: 'heart',     page: 'pages/kids.html'       },
     { id: 'datasources',label: 'Veri Kaynakları',    icon: 'data',      page: 'pages/datasources.html'},
     { id: 'bookmarks',  label: 'Faydalı Siteler',     icon: 'link',      page: 'pages/bookmarks.html'  },

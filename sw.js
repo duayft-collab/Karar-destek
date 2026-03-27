@@ -32,6 +32,7 @@ const STATIC_ASSETS = [
   './src/modules/growth.module.js',
   './src/modules/kids.module.js',
   './src/modules/anayasa.module.js',
+  './src/modules/youtube.module.js',
   './src/modules/signals.module.js',
   './src/modules/data-sources.module.js',
   './src/modules/alarm.module.js',

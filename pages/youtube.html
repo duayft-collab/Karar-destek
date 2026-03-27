@@ -1,0 +1,60 @@
+<!--
+  Strategy Hub — pages/youtube.html
+  YouTube Video Özet Merkezi
+  Versiyon: 5.5.0 | 2026-03-27
+-->
+<div class="page-content">
+  <div class="ph">
+    <h2>YouTube Özet Merkezi</h2>
+    <p>Takip ettiğin kanalların yeni videoları — Türkçe özetler & anahtar alıntılar</p>
+  </div>
+
+  <!-- Filtre bar -->
+  <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
+    <div id="yt-filters" style="display:flex;gap:5px;flex-wrap:wrap;flex:1"></div>
+    <div id="yt-meta" style="font-size:10px;color:var(--text3)"></div>
+  </div>
+
+  <!-- Video listesi -->
+  <div id="yt-list"></div>
+
+  <!-- Boş durum -->
+  <div id="yt-empty" style="display:none;text-align:center;padding:40px;color:var(--text3)">
+    <div style="font-size:32px;margin-bottom:10px">📺</div>
+    <div style="font-size:14px;font-weight:600;margin-bottom:6px">Henüz video yok</div>
+    <div style="font-size:12px">YouTube Tracker'ı kur ve GitHub Actions'ı çalıştır.</div>
+    <div style="font-size:11px;margin-top:8px;color:var(--text3)">
+      Tracker repo'su: <code>data/summaries.json</code> dosyasını günceller,<br>
+      bu sayfa otomatik olarak çeker.
+    </div>
+  </div>
+
+  <!-- Yükleniyor -->
+  <div id="yt-loading">
+    <div class="skeleton-wrap">
+      <div class="skeleton-row">
+        <div class="skeleton-card"></div><div class="skeleton-card"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kurulum rehberi (tracker kurulmamışsa göster) -->
+  <div id="yt-setup" style="display:none">
+    <div class="card" style="margin-top:16px">
+      <div class="card-h">
+        <div class="card-icon" style="background:rgba(37,99,235,.08)">⚙️</div>
+        <h3>YouTube Tracker Kurulum Rehberi</h3>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8">
+        <div style="margin-bottom:10px"><strong>1. Yeni GitHub repo aç:</strong> github.com/new → tracker-hub</div>
+        <div style="margin-bottom:10px"><strong>2. Dosyaları yükle:</strong> channels.json, scripts/tracker.py, .github/workflows/tracker.yml</div>
+        <div style="margin-bottom:10px"><strong>3. channels.json'u düzenle:</strong> Takip etmek istediğin YouTube kanal ID'lerini ekle</div>
+        <div style="margin-bottom:10px"><strong>4. GitHub Secrets ekle:</strong> YOUTUBE_API_KEY ve OPENAI_API_KEY</div>
+        <div style="margin-bottom:10px"><strong>5. Bu sayfada SUMMARIES_URL'i güncelle:</strong> tracker repo'nun raw data/summaries.json URL'i</div>
+        <div><strong>6. Actions → Run workflow</strong> ile test et</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" data-module="src/modules/youtube.module.js"></script>
