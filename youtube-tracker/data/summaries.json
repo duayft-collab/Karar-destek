@@ -1,7 +1,30 @@
 {
-  "generated_at": "2026-05-29T10:50:50.553714+00:00",
+  "generated_at": "2026-05-29T18:14:33.266584+00:00",
   "total": 60,
   "videos": [
+    {
+      "id": "FJRHFVKuT5E",
+      "title": "1971: The Day Money Stopped Being Real!",
+      "channel": "The Rich Dad Channel (Kiyosaki)",
+      "category": "Finans & Yatırım",
+      "url": "https://youtube.com/watch?v=FJRHFVKuT5E",
+      "thumbnail": "https://i3.ytimg.com/vi/FJRHFVKuT5E/hqdefault.jpg",
+      "published": "2026-05-29T13:09:25+00:00",
+      "published_tr": "29 May 2026, 13:09",
+      "has_transcript": false,
+      "info": [
+        "Here's your free copy — How To Build a One-Person Solo Business Using AI."
+      ],
+      "advice": [
+        "The video explores how traditional financial advice became outdated after 1971, when the US dollar left the gold standard, fundamentally changing the money system. This pivotal \"nixon shock\" transformed currency into a debt based economy, making old personal finance strategies ineffective. Understanding this financial history is crucial for modern financial education, especially concerning inflation and wealth protection."
+      ],
+      "warning": [
+        "Disclaimer: The information provided in this video is for educational and informational purposes only. It should not be considered as financial advice or a recommendation to buy or sell any fina"
+      ],
+      "key_idea": "1971: The Day Money Stopped Being Real!",
+      "decision": "The Rich Dad Channel (Kiyosaki) takipçileri ve konuyla ilgilenenler için.",
+      "processed_at": "2026-05-29T18:14:32.202443+00:00"
+    },
     {
       "id": "VkxuFaCW1nw",
       "title": "Tarafların Savaşa Devam Niyeti Olmaması Fiyatlanıyor, Gram Altın 6710 TL Gümüş 115 TL",
@@ -1358,29 +1381,6 @@
       "key_idea": "Vergiden Tam Muaf Borsa İstanbul  BIST Yatırım Fonları",
       "decision": "Cihat E. Çiçek takipçileri ve konuyla ilgilenenler için.",
       "processed_at": "2026-04-27T09:23:20.258320+00:00"
-    },
-    {
-      "id": "HSO11GK4mCE",
-      "title": "Altın, Gümüş, Petrol, Nikel, Kobalt ....  Emtia Süper Döngüsü Kapıda mı ?",
-      "channel": "Cihat E. Çiçek",
-      "category": "Finans & Yatırım",
-      "url": "https://youtube.com/watch?v=HSO11GK4mCE",
-      "thumbnail": "https://i1.ytimg.com/vi/HSO11GK4mCE/hqdefault.jpg",
-      "published": "2026-04-27T05:49:27+00:00",
-      "published_tr": "27 Apr 2026, 05:49",
-      "has_transcript": false,
-      "info": [
-        "Altın, Gümüş, Petrol, Nikel, Kobalt ....  Emtia Süper Döngüsü Kapıda mı ?"
-      ],
-      "advice": [
-        "*bluesky hesabım:     @cihatecicek.bsky.social"
-      ],
-      "warning": [
-        "Sen Uyurken Paran Senin İçin Çalısın YENİ KİTAP linklerim"
-      ],
-      "key_idea": "Altın, Gümüş, Petrol, Nikel, Kobalt ....  Emtia Süper Döngüsü Kapıda mı ?",
-      "decision": "Cihat E. Çiçek takipçileri ve konuyla ilgilenenler için.",
-      "processed_at": "2026-04-27T09:23:21.393317+00:00"
     }
   ]
 }
