@@ -1,7 +1,30 @@
 {
-  "generated_at": "2026-08-01T09:08:51.834042+00:00",
+  "generated_at": "2026-08-01T16:05:13.745641+00:00",
   "total": 60,
   "videos": [
+    {
+      "id": "QbDhrB3SCp4",
+      "title": "How to Convert a Liability into an Asset - Robert Kiyosaki",
+      "channel": "The Rich Dad Channel (Kiyosaki)",
+      "category": "Finans & Yatırım",
+      "url": "https://youtube.com/watch?v=QbDhrB3SCp4",
+      "thumbnail": "https://i2.ytimg.com/vi/QbDhrB3SCp4/hqdefault.jpg",
+      "published": "2026-08-01T12:15:38+00:00",
+      "published_tr": "01 Aug 2026, 12:15",
+      "has_transcript": false,
+      "info": [
+        "Asset vs liability is more than an accounting term—it's the foundation of how wealth is built. In this episode of The Rich Dad Radio Show, Robert Kiyosaki explains why most people misunderstand this simple concept and how that misunderstanding keeps them trapped financially."
+      ],
+      "advice": [
+        "Robert breaks down Rich Dad's famous definition of assets and liabilities and challenges conventional financial advice about homeownership, retirement accounts, diversification, and long-term financial planning. Using real-world examples, he demonstrates why cash flow—not labels, market value, or popular opinion—determines whether something builds wealth or drains it."
+      ],
+      "warning": [
+        "The true difference between an asset and a liability"
+      ],
+      "key_idea": "How to Convert a Liability into an Asset - Robert Kiyosaki",
+      "decision": "The Rich Dad Channel (Kiyosaki) takipçileri ve konuyla ilgilenenler için.",
+      "processed_at": "2026-08-01T16:05:12.562862+00:00"
+    },
     {
       "id": "OypdV5idyJo",
       "title": "2008 Büyük Krizi Tekrarı Kapıda mı? ABD Tahvil Faizleri Uçtu. Varlıklarda Toplu Çöküş ve Sonrası",
@@ -1358,29 +1381,6 @@
       "key_idea": "Top10  Ol Tapon Olma,  Altın ve Gümüş ile Yarı Fiyatına Ev Alabilecek Param Olacak mı ? Petrol ?",
       "decision": "Cihat E. Çiçek takipçileri ve konuyla ilgilenenler için.",
       "processed_at": "2026-06-28T10:05:33.409688+00:00"
-    },
-    {
-      "id": "Bl2W3DnHPxE",
-      "title": "Everyone's Buying AI. Smart Investors Are Buying This Instead. - Robert Kiyosaki",
-      "channel": "The Rich Dad Channel (Kiyosaki)",
-      "category": "Finans & Yatırım",
-      "url": "https://youtube.com/watch?v=Bl2W3DnHPxE",
-      "thumbnail": "https://i3.ytimg.com/vi/Bl2W3DnHPxE/hqdefault.jpg",
-      "published": "2026-06-27T13:15:09+00:00",
-      "published_tr": "27 Jun 2026, 13:15",
-      "has_transcript": false,
-      "info": [
-        "AI energy demand is creating one of the biggest investment shifts of the next decade—and most people are looking in the wrong place."
-      ],
-      "advice": [
-        "In this episode of The Rich Dad Radio Show, Robert Kiyosaki explains why the AI revolution isn't just about software, semiconductors, or chatbots. Every AI model, data center, and intelligent system depends on one critical resource: reliable electricity."
-      ],
-      "warning": [
-        "Robert explores why the growing demand for AI could accelerate investment in energy infrastructure, particularly nuclear power and small modular reactors. Using Rich Dad principles, he explains why successful investors look beyond the headlines to identify the assets that make emerging technologies possible."
-      ],
-      "key_idea": "Everyone's Buying AI. Smart Investors Are Buying This Instead. - Robert Kiyosaki",
-      "decision": "The Rich Dad Channel (Kiyosaki) takipçileri ve konuyla ilgilenenler için.",
-      "processed_at": "2026-06-27T16:11:48.690814+00:00"
     }
   ]
 }
