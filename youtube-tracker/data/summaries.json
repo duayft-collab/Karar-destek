@@ -1,7 +1,30 @@
 {
-  "generated_at": "2026-10-23T19:00:48.228031+00:00",
+  "generated_at": "2026-10-24T11:54:26.371450+00:00",
   "total": 60,
   "videos": [
+    {
+      "id": "LQzRpf_WudQ",
+      "title": "Bursa Leşber Buluşma Sabahı Kısa Yayın",
+      "channel": "Cihat E. Çiçek",
+      "category": "Finans & Yatırım",
+      "url": "https://youtube.com/watch?v=LQzRpf_WudQ",
+      "thumbnail": "https://i1.ytimg.com/vi/LQzRpf_WudQ/hqdefault.jpg",
+      "published": "2026-10-24T05:28:45+00:00",
+      "published_tr": "24 Oct 2026, 05:28",
+      "has_transcript": false,
+      "info": [
+        "*bluesky hesabım:     @cihatecicek.bsky.social"
+      ],
+      "advice": [
+        "TUTUMLU KEDİ FRİDA'NIN MACERALARI SİPARİŞ SİTELERİ"
+      ],
+      "warning": [
+        "Ek araştırma önerilir."
+      ],
+      "key_idea": "Bursa Leşber Buluşma Sabahı Kısa Yayın",
+      "decision": "Cihat E. Çiçek takipçileri ve konuyla ilgilenenler için.",
+      "processed_at": "2026-10-24T11:54:25.181332+00:00"
+    },
     {
       "id": "Q-woLbIkUlQ",
       "title": "Dolares 49.80, Altın 4005 USD Ons, ABD Banka Hesaplarına Yapay Zeka Ajanları Girdi, Evde Su ve Nakit",
@@ -1358,29 +1381,6 @@
       "key_idea": "BIST'te Zincirleme Kaza, Fiziki Altına Kurban Olayım, Paraları Hapis, McQueen Dün Olmadı Bugün Acil",
       "decision": "Cihat E. Çiçek takipçileri ve konuyla ilgilenenler için.",
       "processed_at": "2026-09-17T12:29:45.999317+00:00"
-    },
-    {
-      "id": "Ml65cOl1pcI",
-      "title": "Robert Kiyosaki: Why I Use Debt Instead of Avoiding It",
-      "channel": "The Rich Dad Channel (Kiyosaki)",
-      "category": "Finans & Yatırım",
-      "url": "https://youtube.com/watch?v=Ml65cOl1pcI",
-      "thumbnail": "https://i2.ytimg.com/vi/Ml65cOl1pcI/hqdefault.jpg",
-      "published": "2026-09-16T14:41:30+00:00",
-      "published_tr": "16 Sep 2026, 14:41",
-      "has_transcript": false,
-      "info": [
-        "Real estate investing with debt can give investors leverage to acquire larger assets, generate cash flow, and build equity—but Robert Kiyosaki argues that debt only becomes a useful financial tool when you understand how to manage it."
-      ],
-      "advice": [
-        "In this episode of The Rich Dad Radio Show, Robert Kiyosaki sits down with longtime friend and real estate investor Ken McElroy to challenge conventional thinking about debt and explain how experienced investors use leverage, other people's money (OPM), cash flow, and refinancing to build wealth through real estate."
-      ],
-      "warning": [
-        "Robert starts with one of Rich Dad's most contrarian ideas: not all debt is bad debt. While getting out of debt can make sense for someone who doesn't understand how to use leverage, Robert and Ken explain why sophisticated investors may deliber"
-      ],
-      "key_idea": "Robert Kiyosaki: Why I Use Debt Instead of Avoiding It",
-      "decision": "The Rich Dad Channel (Kiyosaki) takipçileri ve konuyla ilgilenenler için.",
-      "processed_at": "2026-09-16T18:46:52.929320+00:00"
     }
   ]
 }
